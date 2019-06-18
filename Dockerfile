@@ -1,12 +1,12 @@
-FROM openjdk:latest
+FROM openjdk:8
 MAINTAINER greggentling https://github.com/greggentling
 
 ENV PENTAHO_HOME /opt/pentaho
 
 
 RUN . /etc/environment
-ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk-amd64
-ENV PENTAHO_JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk-amd64
+ENV JAVA_HOME /usr/local/openjdk-8
+ENV PENTAHO_JAVA_HOME /usr/local/openjdk-8
 
 # Install Dependences
 RUN apt-get update; apt-get install zip netcat postgresql-client -y; \
